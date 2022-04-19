@@ -1,18 +1,15 @@
-function validatePIN (pin) {
-
-let pinNum = Number(pin);
- if (Number.isInteger(pinNum) && (pinNum >= 0) && (pinNum.length == 4 || pinNum.length == 6)){
-        return true;
-     } else {
-         return false
+function points(games) {
+  let points = 0;
+  for (let i = 0; i < games.length; i++) {
+    let x = games[i][0];
+    let y = games[i][2];
+     if (x > y){
+       points += 3;
+     } else if (x < y) {
+       points += 0;
+     } else if (x === y) {
+       points += 1;
      }
-
-    // if ( (Number(pin) == pin)
-    // &&  (pin >= 0) 
-    // &&  (Number.isInteger(Number(pin)) == true)
-    // && (pin.length == 4  || pin.length == 6)){
-    //     return true;
-    // } else {
-    //     return false;
-    // }
   }
+  return points;
+}
