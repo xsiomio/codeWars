@@ -1,15 +1,12 @@
-function points(games) {
-  let points = 0;
-  for (let i = 0; i < games.length; i++) {
-    let x = games[i][0];
-    let y = games[i][2];
-     if (x > y){
-       points += 3;
-     } else if (x < y) {
-       points += 0;
-     } else if (x === y) {
-       points += 1;
-     }
-  }
-  return points;
-}
+const HIGH_TEMPERATURES = {
+  yesterday: 75,
+  today: 77,
+  tomorrow: 80
+};
+
+// Only change code below this line
+
+const today = HIGH_TEMPERATURES.today;
+const tomorrow = HIGH_TEMPERATURES.tomorrow;
+
+// Only change code above this line
